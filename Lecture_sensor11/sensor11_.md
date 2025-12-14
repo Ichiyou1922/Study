@@ -101,13 +101,15 @@ V_{out}=-\frac{R_2}{R_1 + Z_{c}}V_{in}=-\frac{R_2}{R_1}\frac{V_{in}}{1+\frac{1}{
 ```math
 V_{out}=-\frac{R_2}{R_1}\frac{V_{in}}{1+\frac{\omega_0}{j\omega}}
 ```
-- $\omega << \omega_0$ のとき$\frac{\omega_0}{j\omega}$ が支配的(>>1)だから $A=-\frac{R_2}{R_1}\frac{\omega}{\omega_0}j$
+- $\omega << \omega_0$ のとき $\frac{\omega_0}{j\omega}$ が支配的(>>1)だから $A=-\frac{R_2}{R_1}\frac{\omega}{\omega_0}j$
 - $\omega = \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{1}{1-j}$
-- $\omega >> \omega_0$ のとき$A=-\frac{R_2}{R_1}$
+- $\omega >> \omega_0$ のとき $A=-\frac{R_2}{R_1}$
 - 絶対値が一番大きいのは $\omega >> \omega_0$ のとき->高い周波数は通り，低い周波数は通らない->HPF
+
 ###ボード線図
 縦軸: デシベル(20logA)/横軸: 周波数ω(log)
 - HPFでは $\omega_0$ より大きいところで一定，小さければ小さいほどdBも小さくなる． $\omega=\omega_0$ では-3dB
+- $20log_{10}\frac{1}{\sqrt{2}}\frac{R_2}{R_1}-20log_{10} \frac{R_2}{R_1}=-10log2\approx -3$
 
 ### LPF
 ```
@@ -129,7 +131,7 @@ V_{out}=-\frac{R_2}{R_1}\frac{1}{1+j\omega R_{2}c}
 ```math
 V_{out} = -\frac{R_2}{R_1}\frac{1}{1+j\frac{\omega}{\omega_0}}
 ```
-- $\omega << \omega_0$ のとき$\frac{\omega}{\omega_0} << 1$ だから $A=-\frac{R_2}{R_1}$
+- $\omega << \omega_0$ のとき $\frac{\omega}{\omega_0} << 1$ だから $A=-\frac{R_2}{R_1}$
 - $\omega = \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{1}{1+j}$
 - $\omega >> \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{\omega_0}{j\omega}$
 - 絶対値が一番大きいのは $\omega << \omega_0$ のとき->低い周波数は通り，高い周波数は通らない->LPF
