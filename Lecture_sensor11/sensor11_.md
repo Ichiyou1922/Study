@@ -79,7 +79,7 @@ z Lecture: sensor11
 - A $\to$ B: 
 ### HPF
 ```
-Vin        
+Vin
  ┃
  R1
  ┃
