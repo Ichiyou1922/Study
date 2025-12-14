@@ -51,18 +51,18 @@ z Lecture: sensor11
 - コンデンサの大きさ->電荷の最大保存量に関係(シンクと風呂の違い)->電圧の変わりやすさに関係->同じ電圧変化に対して電流が大きい・小さい->反応が早い・遅い
 - f=0->絶縁↔f=infin->ショート
 - HPF:
-
+```
 ━C ┯-O1
     R
 ━━┷-O2
-
+```
 - fが小さいとCが絶縁(通りにくい)↔fが大きいと通る
 - LPF:
-
+```
 ━R ┯-O1
     C
 ━━┷-O2
-
+```
 - fが小さいとO1で観測できる↔fが大きいとCの方に流れ出るのでO1で観測できない
 ## 3. Abstraction (アナロジー)
 - LPF↔積分: 急な変化(高周波)には反応せずゆっくりした変化(低周波)だけ受け入れる
@@ -78,7 +78,7 @@ z Lecture: sensor11
 ## 2. Logic & Mechanism (構造)
 - A $\to$ B: 
 ### HPF
-
+```
 Vin        
  ┃
  R1
@@ -88,7 +88,7 @@ Vin
  R2          ┃
  ┃          ┃
 Vout        GND
-
+```
 - Cがなければ反転型増幅回路
 - $i_- \approx 0, i_+ \approx 0, V_+ \approx V_-$ は変わらない
 - $Z_c = \frac{1}{j\omega c}$ として単位を合わせて計算する（インピーダンス）(なんで-jかけるの？->電圧に対して電流の位相が進むことを表す(位相を90°遅らせる))
@@ -102,7 +102,7 @@ V_{out}=-\frac{R_2}{R_1 + Z_{c}}V_{in}=-\frac{R_2}{R_1}\frac{V_{in}}{1+\frac{1}{
 V_{out}=-\frac{R_2}{R_1}\frac{V_{in}}{1+\frac{\omega_0}{j\omega}}
 ```
 - $\omega << \omega_0$ のとき$\frac{\omega_0}{j\omega}$ が支配的(>>1)だから $A=-\frac{R_2}{R_1}\frac{\omega}{\omega_0}j$
-- $\omega = \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{1}{1-j)$
+- $\omega = \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{1}{1-j}$
 - $\omega >> \omega_0$ のとき$A=-\frac{R_2}{R_1}$
 - 絶対値が一番大きいのは $\omega >> \omega_0$ のとき->高い周波数は通り，低い周波数は通らない->HPF
 ###ボード線図
@@ -110,7 +110,7 @@ V_{out}=-\frac{R_2}{R_1}\frac{V_{in}}{1+\frac{\omega_0}{j\omega}}
 - HPFでは $\omega_0$ より大きいところで一定，小さければ小さいほどdBも小さくなる． $\omega=\omega_0$ では-3dB
 
 ### LPF
-
+```
 Vin        
  ┃
  R1
@@ -121,7 +121,7 @@ R2 C         ┃
  ┗┛        ┃
   ┃         ┃
 Vout        GND
-
+```
 ```math
 V_{out}=-\frac{R_2}{R_1}\frac{1}{1+j\omega R_{2}c}
 ```
@@ -130,7 +130,7 @@ V_{out}=-\frac{R_2}{R_1}\frac{1}{1+j\omega R_{2}c}
 V_{out} = -\frac{R_2}{R_1}\frac{1}{1+j\frac{\omega}{\omega_0}}
 ```
 - $\omega << \omega_0$ のとき$\frac{\omega}{\omega_0} << 1$ だから $A=-\frac{R_2}{R_1}$
-- $\omega = \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{1}{1+j)$
+- $\omega = \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{1}{1+j}$
 - $\omega >> \omega_0$ のとき $A=-\frac{R_2}{R_1}\frac{\omega_0}{j\omega}$
 - 絶対値が一番大きいのは $\omega << \omega_0$ のとき->低い周波数は通り，高い周波数は通らない->LPF
 ## 3. Abstraction (アナロジー)
