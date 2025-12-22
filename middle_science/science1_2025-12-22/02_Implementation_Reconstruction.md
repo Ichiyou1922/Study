@@ -8,13 +8,13 @@ typedef struct {
     // 必要なメンバ変数は何か
     // double energy;
     // complex double state;
-} test_t;
+} science1_t;
 ```
 
 ## 2. The Algorithm (アルゴリズム)
 - 入力を出力へ写す `Core Kernel` を書け．文法よりロジックを優先し，入出力の意味をコメントで固定せよ．
 ```c
-void update(test_t *sys) {
+void update(science1_t *sys) {
     // 入力: sys の現在状態
     // 出力: sys の更新後状態
     // ここに物理法則/ロジックを記述
